@@ -51,7 +51,7 @@ Stack Interface --> Operations
 Applications of Stack:
 ----------------------
 
-. Functio call Stack -> Stacks are Used to manage function calls in programming languages , keeping track of the order in which functions are called.
+. Function call Stack -> Stacks are Used to manage function calls in programming languages , keeping track of the order in which functions are called.
 
 . Backtracking Algorithm -> Stacks can be used to implement backtracking algorithmsm, Where you explore different paths in a problem space.
 
@@ -63,12 +63,6 @@ Applications of Stack:
 Anology of Stack:
 ----------------
 A Stack can be visualized as a pile of pancakes, where you can only add or remove pancakes from the top.
-
-
-
-
-
-
 
 
 """
