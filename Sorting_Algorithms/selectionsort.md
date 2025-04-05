@@ -45,6 +45,7 @@ def SelectionSort(arr, ascending = True):
 
 ## Complexity:
 
+![selectionsort](https://github.com/user-attachments/assets/a0a411b5-be6f-472a-b3ad-0327f0f9e9d9)
 
 | **Class**                | Sorting algorithm     |
 |--------------------------|-----------------------|
