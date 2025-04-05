@@ -17,6 +17,32 @@ The selection sort algorithm finds the lowest value in an array and moves it to 
 
 &nbsp; 
 
+
+## Implementation in python
+
+
+```python
+	
+def SelectionSort(arr, ascending = True):
+	for i in range(len(arr)):
+		index = i
+		for j in range(i + 1, len(arr)):
+			if ascending: 
+				if arr[j] < arr[index]:
+					index = j
+			else:
+				if arr[j] > arr[index]:
+					index = j
+
+		arr[i], arr[index] = arr[index], arr[i]
+	return arr
+
+
+```
+
+&nbsp; 
+
+
 ## Complexity:
 
 
@@ -30,13 +56,3 @@ The selection sort algorithm finds the lowest value in an array and moves it to 
 | **Optimal**               | No                    |
 
 
-
-## Implementation in python
-
-
-```python
-
-
-
-
-```
