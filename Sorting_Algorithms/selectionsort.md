@@ -1,19 +1,24 @@
 # Selection Sort
 
-The selection sort algorithm finds the lowest value in an array and moves it to the front of the array.
+Selection sort is a simple, comparison-based sorting algorithm that organizes a list by repeatedly finding the minimum (or maximum) element from the unsorted portion and moving it to the sorted portion.
 
 
 ![selection sort](https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif)
 
 &nbsp; 
 
-## Algorithm:
+## How Selection Sort Works:
 
-1. Find a largest number number in prefix A[:i + 1] and swap it to A[i]
+- The array is divided into two parts: a sorted subarray (initially empty) and an unsorted subarray (initially the entire array).
 
-2. Recursively sort prefix A[:i]
+- On each pass, the algorithm:
 
-3. Example: [8, 2, 4, 9, 3], [8, 2, 4, 3, 9], [3, 2, 4, 8, 9], [3, 2, 4, 8, 9], [2, 3, 4, 8, 9]
+	- Scans the unsorted part to find the minimum element.
+
+	- Swaps this minimum element with the first unsorted element, effectively growing the sorted part by one and shrinking the unsorted part.
+
+
+This process is repeated until all elements are sorted.
 
 &nbsp; 
 
