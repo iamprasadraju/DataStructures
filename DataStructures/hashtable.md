@@ -28,6 +28,9 @@ A **Hash table** is a data structure that stores data in key-value pairs, enabli
 
     - The value is stored at this index, alongside its key
 
+
+![img](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hash_table_5_0_1_1_1_1_0_LL.svg/500px-Hash_table_5_0_1_1_1_1_0_LL.svg.png)
+
 ---
 
 ## Where to Use Hash Tables 
@@ -99,5 +102,85 @@ Used in text processing for efficient pattern searching and in file systems for 
 
 - clear() --> Removes all key-value pairs from the table. -> O(1) to O(n)
 
+---
+
+## Implementation of Hash Table
 
 
+```python
+# Hash table implemented in Python
+
+class HashTable:
+    def __init__(self, initial_size=8, load_factor=0.75):
+        self.size = initial_size
+        self.count = 0
+        self.load_factor = load_factor
+        self.buckets = [[] for _ in range(self.size)]
+
+    def _hash(self, key):
+        # Basic hash function using Python's built-in hash()
+        return hash(key) % self.size
+
+    def _resize(self):
+        # Double the size when load factor is exceeded
+        new_size = self.size * 2
+        new_buckets = [[] for _ in range(new_size)]
+        
+        # Rehash all existing elements
+        for bucket in self.buckets:
+            for key, value in bucket:
+                new_index = hash(key) % new_size
+                new_buckets[new_index].append((key, value))
+        
+        self.size = new_size
+        self.buckets = new_buckets
+
+    def insert(self, key, value):
+        # Check if resizing is needed
+        if self.count / self.size > self.load_factor:
+            self._resize()
+        
+        index = self._hash(key)
+        bucket = self.buckets[index]
+        
+        # Update existing key
+        for i, (k, _) in enumerate(bucket):
+            if k == key:
+                bucket[i] = (key, value)
+                return
+        
+        # Insert new key
+        bucket.append((key, value))
+        self.count += 1
+
+    def get(self, key):
+        index = self._hash(key)
+        bucket = self.buckets[index]
+        
+        for k, value in bucket:
+            if k == key:
+                return value
+        return None
+
+    def remove(self, key):
+        index = self._hash(key)
+        bucket = self.buckets[index]
+        
+        for i, (k, _) in enumerate(bucket):
+            if k == key:
+                del bucket[i]
+                self.count -= 1
+                return
+        raise KeyError(key)
+
+    def __contains__(self, key):
+        try:
+            self.get(key)
+            return True
+        except KeyError:
+            return False
+
+    def __len__(self):
+        return self.count
+
+```
