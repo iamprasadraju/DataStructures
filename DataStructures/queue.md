@@ -62,7 +62,31 @@ A **Queue** is a fundamental linear data structure that organizes elements in a 
 
 ```python
 
-Class Queue:
-    ...
+class Queue:
+    def __init__(self):
+        self.items = []
+    
+    def enqueue(self, item):
+        """Add item to end (O(1) append)"""
+        self.items.append(item)
+    
+    def dequeue(self):
+        """Remove from front (O(n) pop(0))"""
+        if self.is_empty():
+            raise IndexError("Dequeue from empty queue")
+        return self.items.pop(0)
+    
+    def peek(self):
+        """View front item without removal"""
+        if self.is_empty():
+            raise IndexError("Peek from empty queue")
+        return self.items[0]
+    
+    def is_empty(self):
+        return len(self.items) == 0
+    
+    def size(self):
+        return len(self.items)
+
 
 ```
