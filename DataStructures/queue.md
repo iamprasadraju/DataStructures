@@ -61,7 +61,7 @@ A **Queue** is a fundamental linear data structure that organizes elements in a 
 
 
 ```python
-
+# Queue in Python
 class Queue:
     def __init__(self):
         self.items = []
