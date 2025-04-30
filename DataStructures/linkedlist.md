@@ -4,6 +4,8 @@ Readings:
 
 1. https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec2/
 
+2. https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_r02/
+
 
 A **Linked List** is a linear data structure consisting of a sequence of elements called nodes. Each node contains two parts:
 

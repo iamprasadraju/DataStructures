@@ -6,6 +6,8 @@ Readings:
 
 2. https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec4/
 
+3. https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_r04/
+
 A **Hash table** is a data structure that stores data in key-value pairs, enabling fast insertion, lookup, and deletion operations. It implements an associative array, also known as a dictionary or map, where each unique key maps to a specific value.
 
 ![img](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Hash_table_5_0_1_1_1_1_0_SP.svg/380px-Hash_table_5_0_1_1_1_1_0_SP.svg.png)
@@ -77,6 +79,25 @@ Storage systems use hash tables to detect and remove duplicate files by comparin
 Used in text processing for efficient pattern searching and in file systems for rapid file lookups.
 
 ---
+
+## Hash Table Interface
+
+
+- build(iterable) --> Builds the hash table from an iterable of (key, value) pairs. -> O(n)
+
+- put(key, value) --> Inserts or updates the key with the given value. -> O(1) avg, O(n) worst-case
+
+- get(key) --> Retrieves the value associated with the given key. -> O(1) avg, O(n) worst-case
+
+- remove(key) --> Deletes the key and returns its value if it exists. -> O(1) avg, O(n) worst-case
+
+- contains_key(key) --> Returns True if the key exists in the hash table. -> O(1)
+
+- size() --> Returns the number of key-value pairs. -> O(1)
+
+- is_empty() --> Returns True if the hash table is empty. -> O(1)
+
+- clear() --> Removes all key-value pairs from the table. -> O(1) to O(n)
 
 
 
