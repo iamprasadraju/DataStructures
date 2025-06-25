@@ -18,3 +18,17 @@ Explanation: The first element 4 moves to last position, the second element 5 mo
 
 
 Reference <a href="https://www.geeksforgeeks.org/dsa/program-to-reverse-an-array/">link</a>
+
+
+### Approachs
+
+
+1. Slicing 
+
+2. Temporary array
+
+3. Two Pointers
+
+4. Swapping
+
+5. Recursion
