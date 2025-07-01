@@ -15,8 +15,8 @@ int* randint(int a, int b, int size){
     return arr;
 }
 
-int LinearSearch(int *arr, int target){
-    for(int i = 0; i < sizeof(arr); i++){
+int LinearSearch(int *arr, int size, int target){
+    for(int i = 0; i < size; i++){
         if(arr[i] == target){
             printf("Target Found at %d\n", i);
             return 0;
@@ -29,9 +29,12 @@ int LinearSearch(int *arr, int target){
 int main(){
     srand(time(NULL));  // Seed the random number generator using time func
     int *arr = randint(1, N, N);
-    int target = 100;
+    
+    // Choose a valid target from the array
+    int random_index = rand() % N;
+    int target = arr[random_index];
 
-    LinearSearch(arr, target);
+    LinearSearch(arr, N, target);
     free(arr);
     return 0;
 }
