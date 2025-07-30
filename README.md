@@ -1,4 +1,7 @@
-<center><h1>Data Structures</h1></center>
+
+<div align="center">
+  <h1>Data Structures</h1>
+</div>
 
 -  **Linear Data Structures**:
 
